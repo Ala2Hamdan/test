@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %>
+</head>
+<body>
+    <header>
+    <%- include('../partials/header.ejs')  %>
+   </header>
+<main>
+    <div>
+        <% resultdata.forEach( data =>{ %>
+            <p> <%= data.name %></p>
+            <p> <%= data.house %></p>
+            <p> <%= data.patronus  %></p>
+            <p> <%= data.alive %></p>
+
+            <form action="/favorite-character" method="post">
+                <input type="hidden" name ="name" value="<%= data.name %>">
+                <input type="hidden"name ="house" value="<%= data.house %>">
+                <input type="hidden"name ="patronus" value="<%= data.patronus  %>">
+                <input type="hidden"name ="alive" value="<%= data.alive %>">
+                <input type="submit"  value="favorite character">
+            </form>
+            <% })  %>
+    </div>
+</main>
+</body>
+</html>

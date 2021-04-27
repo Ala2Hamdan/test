@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %>
+</head>
+<body>
+    <header>
+    <%- include('../partials/header.ejs')  %>
+   </header>
+<main>
+    <div>
+            <form action="/create-character" method="post">
+                <input type="text" name ="name" >
+                <input type="text"name ="house" >
+                <input type="text"name ="patronus" >
+                <input type="radio"name ="alive" value="true">alive
+                <input type="radio"name ="alive"value="false">dead
+                <input type="submit"  value=" Create Charater">
+            </form>
+    </div>
+</main>
+</body>
+</html>

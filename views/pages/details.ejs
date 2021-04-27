@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %>
+</head>
+<body>
+    <header>
+    <%- include('../partials/header.ejs')  %>
+   </header>
+<main>
+    <div>
+       
+            <p> <%= results.name %></p>
+            <p> <%= results.house %></p>
+            <p> <%= results.patronus  %></p>
+            <p> <%= results.is_alive %></p>
+
+            <form action="/character/<%=results.id%>?_method=put" method="post">
+                <input type="text" name ="name" value="<%= results.name %>">
+                <input type="text" name ="house" value="<%= results.house %>">
+                <input type="text" name ="patronus" value="<%= results.patronus  %>">
+                <input type="text" name ="alive" value="<%= results.is_alive %>">
+                <input type="submit"  value=" update character">
+            </form>
+            
+            <form action="/character/<%=results.id%>?_method=delete" method="post">
+                <input type="submit"  value=" delete character">
+            </form>
+
+    </div>
+</main>
+</body>
+</html>
+

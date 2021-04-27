@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')  %>
+</head>
+<body>
+    <header>
+    <%- include('../partials/header.ejs')  %>
+   </header>
+<main>
+    <div>
+        <% results.forEach( data =>{ %>
+            <p> <%= data.name %></p>
+            <p> <%= data.house %></p>
+            <p> <%= data.patronus  %></p>
+            <p> <%= data.is_alive %></p>
+             <a href="/character/<%=data.id %>">View Details</a>
+            <% })  %>
+    </div>
+</main>
+</body>
+</html>
