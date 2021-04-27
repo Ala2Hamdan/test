@@ -33,6 +33,15 @@ Patrouns
 is alive (true of false)
 /character/my-characters
 
+
+
+
 Display all the created characters
 you can also edit the information for the character or delete it here
 We need to implement either flex-box or grid when displaying the character information.
+
+
+****************************
+
+for .env file to put your dataBase url use this 
+DATABASE_URL=postgres://<your user name in ubuntu>:<your password in ubuntu>@localhost:5432/< your database name>
